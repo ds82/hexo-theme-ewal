@@ -23,6 +23,10 @@ marked:
   gfm: true
   tables: true
 
+polymer:
+- github-card
+
+
 # For use with tagcloud or tag widgets
 # - only tags >= to tag_minium are shown
 tag_minium: 3

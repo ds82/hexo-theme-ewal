@@ -62,6 +62,12 @@
     <script type="text/javascript" src="<%= item %>"></script>
   <% })} %>
 
+  <% if ( theme.polymer ) { %>
+    <script type="text/javascript" src="thirdparty/platform/platform.js"></script>
+    <% theme.polymer.forEach(function(item){ %>
+      <link rel="import" href="thirdparty/<%= item %>/<%= item %>.html" />
+  <% })} %>
+
 <% if (theme.addthis && theme.addthis.pubid) { %>
   <script type="text/javascript">var addthis_config = {"data_track_addressbar":false, "data_track_clickback":false};</script>
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<%= theme.addthis.pubid %>"></script>
