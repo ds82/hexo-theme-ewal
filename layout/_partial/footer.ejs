@@ -6,6 +6,12 @@
       <% } else { %>
       &copy; <%= new Date().getFullYear() %> <%= config.title %>
       <% } %>
+
+      <% if (config.email) { %>
+      - <span class="email"><%= config.email.split("").reverse().join("") %></span>
+      <% } %>
+
+
     </p>
   </div>
 </div>
